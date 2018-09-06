@@ -13,15 +13,31 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-//
+
 /**
- * Strings for component 'local_outage', language 'en'.
+ * Privacy Subsystem implementation for local_outage.
  *
- * @package     local_outage
- * @author      Daniel Thee Roperto <daniel.roperto@catalyst-au.net>
- * @copyright   2016 Catalyst IT
- * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    local_outage
+ * @copyright  2018 Nathan Nguyen <nathannguyen@catalyst-net.au>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Outage for Old Moodle';
-$string['privacy:metadata'] = 'Outage does not store any personal data';
+namespace local_outage\privacy;
+
+defined('MOODLE_INTERNAL') || die();
+
+/**
+ * The local_outage module does not store any data.
+ *
+ */
+class provider implements \core_privacy\local\metadata\null_provider {
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}
