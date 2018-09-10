@@ -27,7 +27,7 @@ namespace local_outage\privacy;
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * The local_outage module does not store any data.
+ * The local_outage does not store any data.
  *
  */
 class provider implements \core_privacy\local\metadata\null_provider {
