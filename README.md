@@ -5,7 +5,7 @@
 What is this?
 -------------
 
-This is a local plugin used together with the auth plugin.
+This is a local plugin used together with the auth_outage plugin.
 
 You will only need it if you are using Moodle 2.9 or lower.
 
